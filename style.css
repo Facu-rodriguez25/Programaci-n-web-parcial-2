@@ -12,7 +12,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 1.6;
-  background-color: #f4f4f4;
+  background-color: #e0c097;
   color: black;
   background-image: url('img/Fonndo1.png');
 }
@@ -186,15 +186,15 @@ button {
   display: inline-block;
   margin-top: 1.5em;
   text-decoration: none;
-  color: #007BFF;
+  color: #e0c097;
 }
 
 .boton-secundario {
   display: inline-block;
   margin: 1.5rem auto 0 auto;
   padding: 0.8rem 1.5rem;
-  background-color: transparent;
-  color: black;
+  background-color: #e0c097;
+  color: #3e2f1c;
   border: 2px solid black;
   border-radius: 5px;
   text-decoration: none;
@@ -204,8 +204,8 @@ button {
 }
 
 .boton-secundario:hover {
-  background-color: brown;
-  color: #111;
+  background-color: #e0c097;
+  color: #black; 
 }
 
 
@@ -215,5 +215,22 @@ button {
   align-items: center;
   margin-top: 2rem;
 }
+.btn-arriba {
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  background-color: #8B4513;
+  color: white;
+  font-size: 24px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
 
+.boton-inicio:hover {
+  background-color: #A0522D;
+}
 
