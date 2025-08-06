@@ -336,4 +336,24 @@ button {
   .btn-arriba {
     display: none;
   }
+  .fondo-blur {
+  position: fixed;  /* o absolute si prefieres */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('img/Fonndo1.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  z-index: -1;
 }
+
+/* El contenido encima para que no se desenfoque */
+.contenido {
+  position: relative;
+  z-index: 1;
+}
+
+}
+
