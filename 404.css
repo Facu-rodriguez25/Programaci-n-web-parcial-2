@@ -1,44 +1,117 @@
-body {
+
+html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f3f3f3;
-  text-align: center;
-  color: #333;
+  height: 100%;
+  font-family: 'Georgia', serif;
+  overflow-x: hidden; 
 }
 
-.container {
-  padding: 40px;
+
+body {
+  background-image: url('img/Fonndo1.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
+
+
+.filtro-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px) sepia(40%);
+  z-index: 0;
+}
+
+
+.contenido {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  max-width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
 
 h1 {
-  font-size: 100px;
-  margin-bottom: 0;
-  color: #b22222;
+  font-size: 6rem;
+  color: #d43f3f;
+  margin: 0;
 }
 
-h2 {
-  font-size: 32px;
-  margin-top: 0;
-}
 
 p {
-  font-size: 20px;
-  margin: 20px 0;
+  font-size: 1.4rem;
+  margin: 1rem 0;
+  max-width: 600px;
 }
 
 
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: #b22222;
+.boton {
+  background-color: #b72c2c;
   color: white;
+  padding: 0.8rem 1.6rem;
   text-decoration: none;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  font-size: 1.1rem;
 }
 
-.btn:hover {
-  background-color: #8b1a1a;
+.boton:hover {
+  background-color: #9f2323;
+}
+
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .boton {
+    font-size: 1rem;
+    padding: 0.7rem 1.3rem;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .contenido {
+    padding: 1.2rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  p:nth-of-type(2) {
+    display: none; 
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .boton {
+    width: 100%;
+    max-width: 250px;
+  }
 }
