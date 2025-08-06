@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* Quité backdrop-filter aquí para evitar problemas */
+  backdrop-filter: blur(3px);
 }
 
 body {
@@ -14,10 +14,7 @@ body {
   line-height: 1.6;
   background-color: #e0c097;
   color: black;
-  background-image: url('img/Fonndo1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-image: url(img/Fonndo1.png);
 }
 
 header {
@@ -246,11 +243,8 @@ button {
   background-color: #A0522D;
 }
 
-/* ---------------------------------- */
-/* MEDIA QUERIES PARA DISEÑO RESPONSIVE */
-/* ---------------------------------- */
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) { 
   form {
     width: 90%;
   }
@@ -270,7 +264,7 @@ button {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   header {
     display: flex;
     flex-direction: column;
@@ -325,35 +319,24 @@ button {
     padding: 15px 10px;
   }
 
-  /* Mostrar botón arriba en móviles hasta 600px */
-  .btn-arriba {
-    display: inline-block;
-  }
-}
-
-/* Ocultar el botón solo en pantallas muy pequeñas */
-@media (max-width: 400px) {
   .btn-arriba {
     display: none;
   }
-  .fondo-blur {
-  position: fixed;  /* o absolute si prefieres */
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url('img/Fonndo1.png');
-  background-size: cover;
-  background-position: center;
-  filter: blur(3px);
-  z-index: -1;
 }
 
-/* El contenido encima para que no se desenfoque */
-.contenido {
-  position: relative;
-  z-index: 1;
-}
 
+@media (max-width: 640px) {
+  .fondo-inicio {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .fondo-inicio .contenido {
+    max-width: 100%;
+    font-size: 1rem;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+  }
 }
 
