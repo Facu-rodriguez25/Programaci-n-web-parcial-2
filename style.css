@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  backdrop-filter: blur(3px);
 }
 
 body {
@@ -14,7 +14,7 @@ body {
   line-height: 1.6;
   background-color: #e0c097;
   color: black;
-  background-image: url('img/Fonndo1.png');
+  background-image: url(img/Fonndo1.png);
 }
 
 header {
@@ -205,16 +205,17 @@ button {
 
 .boton-secundario:hover {
   background-color: #e0c097;
-  color: #black; 
+  color: black;
+  cursor: pointer;
 }
-
 
 .conoce-mas {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 2rem;
 }
+
 .btn-arriba {
   position: fixed;
   bottom: 30px;
@@ -231,6 +232,67 @@ button {
 }
 
 .boton-inicio:hover {
-  background-color: #A0522D;
+  background-color: #A0522D;
 }
+
+@media (max-width: 1024px) {
+  form {
+    width: 90%;
+  }
+
+  .galeria img,
+  .exhibiciones img {
+    width: 45%;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  section {
+    max-width: 95%;
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .galeria img,
+  .exhibiciones img {
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+    text-align: left;
+  }
+
+  input, textarea {
+    width: 100%;
+  }
+
+  header {
+    padding: 20px 10px;
+  }
+
+  section {
+    padding: 15px 10px;
+  }
+
+  .btn-arriba {
+    display: none;
+  }
+}
+
 
